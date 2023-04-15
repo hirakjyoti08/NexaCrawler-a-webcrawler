@@ -8,7 +8,7 @@ class CrawlingSpider(CrawlSpider):
 
     PROXY_SERVER = "50.63.165.137"  # https://geonode.com/free-proxy-list
   
-   #crawling_starts 
+   #crawling
     rules = (
         Rule(LinkExtractor(allow="catalogue/category")),
         Rule(LinkExtractor(allow="catalogue", deny ="category"), callback="parse_item")
