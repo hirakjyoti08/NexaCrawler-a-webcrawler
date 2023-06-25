@@ -14,7 +14,7 @@ class CrawlingSpider(CrawlSpider):
         Rule(LinkExtractor(allow="catalogue", deny ="category"), callback="parse_item")
     )
    
-   #extracting the tittle and price of the items
+   #extracting the tittle and prices of the items
     def parse_item(self, response):
         yield{
             "title": response.css(".product_main h1::text").get(),
